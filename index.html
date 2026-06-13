@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="c176 — 录音艺术科班混音师 / 流行·摇滚·爵士·古典 / Pro Tools · Reaper · Ableton · Cubase · Nuendo · Wwise" />
+  <meta name="keywords" content="混音师,Mixing Engineer,录音艺术,Pro Tools,Wwise,c176,作品集" />
+  <title>c176 — Mixing Engineer | 混音作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav">
+    <div class="nav__logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
+            <line x1="4"  y1="12" x2="4"  y2="12" />
+            <line x1="8"  y1="6"  x2="8"  y2="18" />
+            <line x1="12" y1="2"  x2="12" y2="22" />
+            <line x1="16" y1="7"  x2="16" y2="17" />
+            <line x1="20" y1="10" x2="20" y2="14" />
+          </g>
+        </svg>
+      </span>
+      <span class="logo-text">c176</span>
+    </div>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#works">Works</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta">Hire Me</a>
+    <button class="nav__burger" id="navBurger" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO 主页 ============ -->
+  <section id="home" class="hero">
+    <canvas id="spectrum" class="hero__spectrum" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">
+        <span class="dot"></span> AVAILABLE FOR FREELANCE · 2026
+      </p>
+      <h1 class="hero__title">
+        <span class="title-line">MIXING ENGINEER</span>
+        <span class="title-line title-line--accent">声音的雕塑师</span>
+      </h1>
+      <p class="hero__sub">
+        录音艺术科班出身 / 流行 · 摇滚 · 爵士 · 古典
+        <br />
+        Pro Tools · Reaper · Ableton · Cubase · Nuendo · Wwise
+      </p>
+      <div class="hero__cta">
+        <a href="#works" class="btn btn--primary">▶ 收听作品</a>
+        <a href="#contact" class="btn btn--ghost">开始合作 →</a>
+      </div>
+
+      <div class="hero__meta">
+        <div class="meta-item">
+          <span class="meta-num" data-count="60">0</span><span class="meta-plus">+</span>
+          <span class="meta-label">混音作品</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num" data-count="4">0</span>
+          <span class="meta-label">音乐风格</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num" data-count="10">0</span><span class="meta-plus">+</span>
+          <span class="meta-label">专业 DAW / 中间件</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num" data-count="24">0</span><span class="meta-suffix">h</span>
+          <span class="meta-label">最快交付</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">SCROLL</div>
+  </section>
+
+  <!-- ============ ABOUT 关于 ============ -->
+  <section id="about" class="about">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">About</h2>
+      <span class="section-sub">关于我</span>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__text">
+        <p class="about__lead">
+          您好,我是 <span class="hl">c176</span>。
+        </p>
+        <p>
+          录音艺术专业科班毕业,主修音乐录音与混音方向。从 Pop 到 Classical,从 Rock 到 Jazz,
+          我相信 <span class="hl">好的混音是隐形的</span> — 它不抢作品的戏,却让每一个频段都在恰当的位置呼吸。
+        </p>
+        <p>
+          熟悉多平台多格式交付,工作流涵盖录音棚多轨录音、现场分轨实况、影视配乐对白 ADR、
+          游戏音频中间件整合(Wwise)、沉浸式空间音频(Ambisonic / Dolby Atmos)与母带预处理。
+        </p>
+        <p>
+          工具服务于审美。我用 Pro Tools 走主流商业交付、用 Reaper 写自动化、用 Cubase/Nuendo 做古典与影视、
+          用 Ableton 做电子与 Live Set,中间件端以 Wwise 主导游戏音频管线。
+        </p>
+      </div>
+
+      <aside class="about__panel">
+        <h3 class="panel-title">Toolbox</h3>
+        <ul class="tag-list">
+          <li class="tag tag--accent">Pro Tools</li>
+          <li class="tag tag--accent">Reaper</li>
+          <li class="tag tag--accent">Ableton Live</li>
+          <li class="tag tag--accent">Cubase</li>
+          <li class="tag tag--accent">Nuendo</li>
+          <li class="tag tag--accent">Wwise</li>
+          <li class="tag">UAD</li>
+          <li class="tag">Waves</li>
+          <li class="tag">FabFilter</li>
+          <li class="tag">Plugin Alliance</li>
+          <li class="tag">iZotope RX</li>
+          <li class="tag">Arturia</li>
+          <li class="tag">UVR</li>
+        </ul>
+
+        <h3 class="panel-title">Music Style</h3>
+        <ul class="tag-list">
+          <li class="tag tag--pop">流行 / Pop</li>
+          <li class="tag tag--rock">摇滚 / Rock</li>
+          <li class="tag tag--jazz">爵士 / Jazz</li>
+          <li class="tag tag--classic">古典 / Classical</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ WORKS 作品集 ============ -->
+  <section id="works" class="works">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Works</h2>
+      <span class="section-sub">代表作品 · 试听 & Before/After</span>
+    </div>
+
+    <!-- 分类切换 -->
+    <div class="works__tabs" role="tablist">
+      <button class="tab is-active" data-cat="all" role="tab">All · 全部</button>
+      <button class="tab" data-cat="pop" role="tab">流行 Pop</button>
+      <button class="tab" data-cat="rock" role="tab">摇滚 Rock</button>
+      <button class="tab" data-cat="jazz" role="tab">爵士 Jazz</button>
+      <button class="tab" data-cat="classic" role="tab">古典 Classical</button>
+    </div>
+
+    <div class="works__grid" id="worksGrid">
+      <!-- 作品卡片由 JS 注入,也可以直接复制以下 HTML -->
+      <article class="track" data-cat="pop">
+        <div class="track__cover" style="--c1:#ff2d8a;--c2:#7a00ff">
+          <div class="cover-shape"></div>
+          <span class="track__num">01</span>
+        </div>
+        <div class="track__info">
+          <h3 class="track__title">深海蓝 (Demo)</h3>
+          <p class="track__meta">流行 / 华语流行 · Vocal Production</p>
+          <div class="track__tags">
+            <span>Lead Vox</span><span>Reverb Tail</span><span>Buss Comp</span>
+          </div>
+          <audio controls preload="none" src="assets/pop-01.mp3"></audio>
+          <button class="ba-btn" data-target="pop-01">▶ 听 Before / After</button>
+        </div>
+      </article>
+
+      <article class="track" data-cat="rock">
+        <div class="track__cover" style="--c1:#ff5e3a;--c2:#ff2a68">
+          <div class="cover-shape"></div>
+          <span class="track__num">02</span>
+        </div>
+        <div class="track__info">
+          <h3 class="track__title">Run the Night</h3>
+          <p class="track__meta">摇滚 / Indie Rock · Live Drums</p>
+          <div class="track__tags">
+            <span>Drum Bus</span><span>Parallel Dist</span><span>Room Sim</span>
+          </div>
+          <audio controls preload="none" src="assets/rock-01.mp3"></audio>
+          <button class="ba-btn" data-target="rock-01">▶ 听 Before / After</button>
+        </div>
+      </article>
+
+      <article class="track" data-cat="jazz">
+        <div class="track__cover" style="--c1:#3affb7;--c2:#00b3ff">
+          <div class="cover-shape"></div>
+          <span class="track__num">03</span>
+        </div>
+        <div class="track__info">
+          <h3 class="track__title">Blue Note Trio</h3>
+          <p class="track__meta">爵士 / Piano Trio · Single Mic + Multi</p>
+          <div class="track__tags">
+            <span>U87 Pair</span><span>Tape Sat</span><span>Soft Comp</span>
+          </div>
+          <audio controls preload="none" src="assets/jazz-01.mp3"></audio>
+          <button class="ba-btn" data-target="jazz-01">▶ 听 Before / After</button>
+        </div>
+      </article>
+
+      <article class="track" data-cat="classic">
+        <div class="track__cover" style="--c1:#ffd86b;--c2:#a06bff">
+          <div class="cover-shape"></div>
+          <span class="track__num">04</span>
+        </div>
+        <div class="track__info">
+          <h3 class="track__title">弦乐四重奏 No.1</h3>
+          <p class="track__meta">古典 / String Quartet · Nuendo</p>
+          <div class="track__tags">
+            <span>Decca Tree</span><span>Spatial EQ</span><span>Convolution</span>
+          </div>
+          <audio controls preload="none" src="assets/classic-01.mp3"></audio>
+          <button class="ba-btn" data-target="classic-01">▶ 听 Before / After</button>
+        </div>
+      </article>
+    </div>
+
+    <p class="works__hint">
+      💡 上传你的作品文件:
+      把音频文件 <code>.mp3 / .wav</code> 放进 <code>assets/</code> 目录,
+      把上面 4 个 <code>&lt;audio&gt;</code> 标签的 <code>src</code> 改成对应文件名即可。
+    </p>
+  </section>
+
+  <!-- ============ SERVICES 服务 & 报价 ============ -->
+  <section id="services" class="services">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Services</h2>
+      <span class="section-sub">服务 · 交付 · 报价</span>
+    </div>
+
+    <div class="services__grid">
+      <article class="srv">
+        <div class="srv__head">
+          <h3>Stem 混音</h3>
+          <span class="srv__price">¥ 800<span> / 首起</span></span>
+        </div>
+        <p class="srv__desc">基于分轨的立体声混音,适合已录音完毕的歌曲/作品。</p>
+        <ul class="srv__list">
+          <li>✅ 分轨整理与增益管理</li>
+          <li>✅ 完整混音(平衡 / EQ / 动态 / 空间)</li>
+          <li>✅ 2 轮免费修改</li>
+          <li>✅ 交付:WAV 24bit/48k + MP3 320k</li>
+          <li>⏱ 交付周期:3–5 个工作日</li>
+        </ul>
+      </article>
+
+      <article class="srv srv--feature">
+        <div class="srv__badge">HOT</div>
+        <div class="srv__head">
+          <h3>Mixing + Mastering</h3>
+          <span class="srv__price">¥ 1,200<span> / 首起</span></span>
+        </div>
+        <p class="srv__desc">混音 + 母带一条龙,统一声学审美,适合发行级交付。</p>
+        <ul class="srv__list">
+          <li>✅ 包含 Stem 混音全部内容</li>
+          <li>✅ 全曲母带处理(响度 / 色彩)</li>
+          <li>✅ 适配流媒体平台 LUFS</li>
+          <li>✅ 2 轮免费修改</li>
+          <li>⏱ 交付周期:5–7 个工作日</li>
+        </ul>
+      </article>
+
+      <article class="srv">
+        <div class="srv__head">
+          <h3>现场分轨实况混音</h3>
+          <span class="srv__price">面议</span>
+        </div>
+        <p class="srv__desc">Live 多轨分轨(多通道)后期混音,适合演出实况节目/直播录制。</p>
+        <ul class="srv__list">
+          <li>✅ 多轨整理、对齐、降噪(RX)</li>
+          <li>✅ 房间声场还原 / FOH 听感模拟</li>
+          <li>✅ 多格式交付(立体声 / 5.1)</li>
+          <li>⏱ 交付周期:视规模而定</li>
+        </ul>
+      </article>
+
+      <article class="srv">
+        <div class="srv__head">
+          <h3>游戏 / 影视音频</h3>
+          <span class="srv__price">项目制</span>
+        </div>
+        <p class="srv__desc">基于 Wwise 中间件的音频整合 + 沉浸式(Atmos / Ambisonic)混音。</p>
+        <ul class="srv__list">
+          <li>✅ Wwise 工程整合与优化</li>
+          <li>✅ 对白 / 音效 / 环境声设计</li>
+          <li>✅ 空间音频(Atmos / Ambisonic)混音</li>
+          <li>⏱ 按里程碑交付</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="services__note">
+      📌 报价为参考起步价,实际报价根据曲目时长、轨道数、修改轮次确定。
+      急单(<strong>24h</strong>)可加急 30%,学生项目 8 折。
+    </p>
+  </section>
+
+  <!-- ============ CONTACT 联系 ============ -->
+  <section id="contact" class="contact">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Contact</h2>
+      <span class="section-sub">开始合作</span>
+    </div>
+
+    <div class="contact__grid">
+      <form class="contact__form" id="contactForm">
+        <h3>项目询价 · 留下你的需求</h3>
+        <label>
+          <span>姓名 / 艺名</span>
+          <input type="text" name="name" required placeholder="你的名字" />
+        </label>
+        <label>
+          <span>联系方式 (微信 / 邮箱 / 手机)</span>
+          <input type="text" name="contact" required placeholder="微信号 / 邮箱 / 手机号" />
+        </label>
+        <label>
+          <span>项目类型</span>
+          <select name="type" required>
+            <option value="">— 请选择 —</option>
+            <option>Stem 混音</option>
+            <option>Mixing + Mastering</option>
+            <option>现场分轨实况混音</option>
+            <option>游戏 / 影视音频</option>
+            <option>其他 / 咨询</option>
+          </select>
+        </label>
+        <label>
+          <span>曲目数 / 截止日期</span>
+          <input type="text" name="deadline" placeholder="例:3 首 / 2026-07-15 前" />
+        </label>
+        <label>
+          <span>项目说明</span>
+          <textarea name="msg" rows="4" placeholder="简单描述风格、参考作品、特殊需求..."></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full">发送询价 →</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+
+      <aside class="contact__side">
+        <div class="qr-card">
+          <h3>微信 · 一键加好友</h3>
+          <div class="qr">
+            <!-- 把下面 src 换成你的微信二维码图片地址 -->
+            <img src="assets/wechat-qr.png" alt="WeChat QR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="qr__placeholder" style="display:none;">
+              <span>把微信二维码</span>
+              <span>放到</span>
+              <code>assets/wechat-qr.png</code>
+            </div>
+          </div>
+          <p class="qr-tip">扫码备注<strong>「混音」</strong>,我会尽快回复</p>
+        </div>
+
+        <ul class="contact__list">
+          <li><span>Email</span><a href="mailto:hi@c176.studio">hi@c176.studio</a></li>
+          <li><span>Location</span><span>中国 · 远程可全球</span></li>
+          <li><span>Response</span><span>通常 12 小时内</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <p>© 2026 <strong>c176</strong> · Mixing Engineer</p>
+      <p class="foot__sub">Crafted in <span>Pro Tools</span> · Designed in <span>VS Code</span></p>
+    </div>
+  </footer>
+
+  <!-- Before/After 模态框 -->
+  <div class="modal" id="baModal" aria-hidden="true">
+    <div class="modal__box">
+      <button class="modal__close" id="baClose" aria-label="关闭">×</button>
+      <h3 id="baTitle">Before / After 对比</h3>
+      <p class="modal__sub">点击左右切换,体验混音前后的差异</p>
+      <div class="ba">
+        <div class="ba__pane" id="baBefore">
+          <span class="ba__label">BEFORE · 混音前</span>
+          <p class="ba__hint">原始分轨 Mix</p>
+        </div>
+        <div class="ba__pane ba__pane--after" id="baAfter">
+          <span class="ba__label">AFTER · 混音后</span>
+          <p class="ba__hint">c176 混音版</p>
+        </div>
+      </div>
+      <p class="modal__foot">
+        💡 上传对比音频:把 <code>*-before.mp3</code> 和 <code>*-after.mp3</code> 放进 <code>assets/</code>,
+        即可在 <code>script.js</code> 的 <code>baTracks</code> 对象中绑定。
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
