@@ -33,6 +33,7 @@
       <a href="#about">About</a>
       <a href="#works">Works</a>
       <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="nav__cta">Hire Me</a>
@@ -345,7 +346,7 @@
   <!-- ============ CONTACT 联系 ============ -->
   <section id="contact" class="contact">
     <div class="section-head">
-      <span class="section-num">04</span>
+      <span class="section-num">05</span>
       <h2 class="section-title">Contact</h2>
       <span class="section-sub">开始合作</span>
     </div>
@@ -405,6 +406,51 @@
           <li><span>Response</span><span>通常 12 小时内</span></li>
         </ul>
       </aside>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS 项目 / 插件发行 ============ -->
+  <section id="projects" class="projects">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Projects</h2>
+      <span class="section-sub">项目 · 插件 · 发行</span>
+    </div>
+
+    <div class="proj__grid">
+      <!-- EQ560 -->
+      <article class="proj">
+        <div class="proj__cover" style="--c1:#28e0c4;--c2:#8a5bff">
+          <div class="cover-shape"></div>
+          <span class="proj__badge">VST3 / AAX</span>
+          <span class="proj__ver">v1.0</span>
+        </div>
+        <div class="proj__info">
+          <h3 class="proj__title">EQ560 — 7-Band EQ</h3>
+          <p class="proj__meta">c176 studio · Vintage Rack-style UI</p>
+          <p class="proj__desc">
+            7段均衡器，灵感源自经典模拟调音台。内置 HP/LP 滤波器、Hi/Lo Shelving、
+            3× Peak EQ（带 Q 值控制）、双 Pultec EQP-1A 风格段落。
+            支持 Digital / Passive / Active 三种模式，实时 EQ 曲线显示。
+          </p>
+          <div class="proj__tags">
+            <span>VST3</span><span>AAX</span><span>Windows</span><span>macOS</span>
+          </div>
+          <div class="proj__dls">
+            <a href="assets/plugins/EQ560/EQ560_Windows_VST3_AAX.zip" class="btn btn--primary" download>⬇ Windows</a>
+            <a href="assets/plugins/EQ560/EQ560_macOS_ARM_VST3.zip" class="btn btn--ghost" download>⬇ macOS ARM</a>
+            <a href="assets/plugins/EQ560/EQ560_macOS_Intel_VST3.zip" class="btn btn--ghost" download>⬇ macOS Intel</a>
+          </div>
+          <details class="proj__install">
+            <summary>安装说明</summary>
+            <div class="proj__install-inner">
+              <p><strong>Windows：</strong>解压 ZIP → 右键 <code>Install.bat</code> → 以管理员运行 → 重启 DAW</p>
+              <p><strong>macOS (M1/M2/M3)：</strong> <code>chmod +x install.sh && sudo ./install.sh</code></p>
+              <p><strong>macOS (Intel)：</strong> <code>chmod +x install.sh && sudo ./install.sh</code></p>
+            </div>
+          </details>
+        </div>
+      </article>
     </div>
   </section>
 
