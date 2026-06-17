@@ -468,6 +468,51 @@ section { padding: 120px var(--pad); max-width: var(--container); margin: 0 auto
   padding: 12px; background: var(--bg-0); border-radius: var(--radius-s);
 }
 
+/* ====================== 询价成功 Modal(双通道) ====================== */
+.modal__box--contact { max-width: 480px; text-align: center; }
+.modal__box--contact .modal__sub { margin-bottom: 28px; }
+.contact-channels {
+  display: flex; flex-direction: column; gap: 16px;
+  margin-bottom: 20px;
+}
+.contact-channel {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--bg-2); border: 1px solid var(--line-2);
+  border-radius: var(--radius-m); padding: 16px;
+  text-align: left; transition: border-color .2s;
+}
+.contact-channel:hover { border-color: var(--neon-cyan); }
+.contact-channel__qr {
+  flex-shrink: 0; width: 110px; height: 110px;
+  background: #fff; border-radius: var(--radius-s);
+  padding: 6px; display: flex; align-items: center; justify-content: center;
+}
+.contact-channel__qr img { width: 100%; height: 100%; object-fit: contain; }
+.contact-channel__icon {
+  flex-shrink: 0; width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+  color: #000; font-size: 28px; font-weight: 700;
+  border-radius: 50%;
+}
+.contact-channel__info { flex: 1; min-width: 0; }
+.contact-channel__info h4 { font-size: 15px; margin-bottom: 4px; }
+.contact-channel__info p { font-size: 13px; color: var(--text-1); margin: 0; }
+.contact-channel__info a {
+  color: var(--neon-cyan); font-weight: 600;
+  border-bottom: 1px dashed currentColor; cursor: pointer;
+}
+.copy-hint {
+  display: inline-block; margin-left: 8px; font-size: 11px;
+  color: var(--text-2); padding: 2px 6px;
+  background: var(--bg-0); border-radius: 4px;
+  transition: color .2s;
+}
+.contact-foot {
+  font-size: 12px; color: var(--text-2); margin: 0;
+  padding-top: 16px; border-top: 1px solid var(--line);
+}
+
 /* ====================== Projects ====================== */
 .projects__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
