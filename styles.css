@@ -185,110 +185,34 @@ section { padding: 120px var(--pad); max-width: var(--container); margin: 0 auto
 
 /* ====================== About ====================== */
 .about__grid {
-  display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: start;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start;
 }
-.about__text p { font-size: 16px; color: var(--text-1); margin-bottom: 20px; line-height: 1.85; }
-.about__lead { font-size: 22px !important; color: var(--text-0) !important; }
+.about__text p { font-size: 16px; color: var(--text-1); margin-bottom: 16px; line-height: 1.8; }
+.about__lead { font-size: 22px !important; color: var(--text-0) !important; line-height: 1.5 !important; }
 .about__panel {
   background: var(--bg-1); border: 1px solid var(--line);
-  border-radius: var(--radius-l); padding: 32px; position: sticky; top: 100px;
+  border-radius: var(--radius-l); padding: 28px; position: sticky; top: 100px;
 }
 .panel-title {
-  font-size: 12px; letter-spacing: 3px; color: var(--text-2);
-  text-transform: uppercase; margin-bottom: 16px; margin-top: 8px;
+  font-size: 11px; letter-spacing: 3px; color: var(--text-2);
+  text-transform: uppercase; margin-bottom: 14px; margin-top: 0;
+  display: flex; align-items: center; gap: 10px;
 }
-.panel-title:first-child { margin-top: 0; }
-.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.panel-title::before {
+  content: ''; width: 14px; height: 1px; background: var(--neon-cyan);
+}
+.panel-title:not(:first-child) { margin-top: 22px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
-  padding: 6px 14px; border-radius: 99px; font-size: 12px;
-  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line);
+  padding: 5px 12px; border-radius: 99px; font-size: 12px;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line);
   color: var(--text-1);
 }
 .tag--accent { color: var(--neon-cyan); border-color: rgba(40, 224, 196, 0.4); background: rgba(40, 224, 196, 0.06); }
 
-/* ====== About: 区块通用 ====== */
-.about__panel .block + .block { margin-top: 24px; }
-
-/* ====== About: Signal Chain(竖向列表) ====== */
-.chain { list-style: none; padding: 0; margin: 0; }
-.chain__step {
-  position: relative; display: flex; align-items: center; gap: 14px;
-  padding: 10px 0;
-}
-.chain__step + .chain__step::before {
-  content: ''; position: absolute; left: 8px; top: -10px;
-  width: 2px; height: 10px; background: rgba(255,255,255,0.08);
-}
-.chain__dot {
-  width: 16px; height: 16px; border-radius: 50%; flex: 0 0 16px;
-  background: var(--bg-1); border: 2px solid var(--text-2);
-  box-shadow: 0 0 0 4px rgba(255,255,255,0.02);
-}
-.chain__dot--in     { border-color: #6ec1ff; background: #6ec1ff; box-shadow: 0 0 12px rgba(110,193,255,0.5); }
-.chain__dot--edit   { border-color: #b48cff; background: #b48cff; box-shadow: 0 0 12px rgba(180,140,255,0.5); }
-.chain__dot--mix    { border-color: var(--neon-cyan); background: var(--neon-cyan); box-shadow: 0 0 12px rgba(40,224,196,0.55); }
-.chain__dot--master { border-color: #ff8a5b; background: #ff8a5b; box-shadow: 0 0 12px rgba(255,138,91,0.5); }
-.chain__dot--out    { border-color: #ff7eb6; background: #ff7eb6; box-shadow: 0 0 12px rgba(255,126,182,0.5); }
-.chain__body { display: flex; flex-direction: column; line-height: 1.25; }
-.chain__body strong { font-size: 13px; color: var(--text-0); font-weight: 600; }
-.chain__body em { font-style: normal; font-size: 11px; color: var(--text-2); margin-top: 2px; }
-
-/* ====== About: Capabilities 4 格 ====== */
-.cap-grid { list-style: none; padding: 0; margin: 0;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
-}
-.cap {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 12px; display: flex; flex-direction: column; gap: 4px;
-}
-.cap__num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px; font-weight: 600; color: var(--neon-cyan);
-}
-.cap__num em {
-  font-style: normal; font-size: 9px; color: var(--text-2);
-  font-weight: 400; letter-spacing: 1px; margin-left: 2px;
-}
-.cap__label { font-size: 10.5px; color: var(--text-2); line-height: 1.35; }
-
-/* ====== About: Genres 列表 ====== */
-.genre-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
-.genre {
-  display: grid; grid-template-columns: 12px 1fr 80px 36px;
-  align-items: center; gap: 10px;
-}
-.genre__swatch { width: 10px; height: 10px; border-radius: 3px; }
-.genre__swatch--pop     { background: #ff5c9c; box-shadow: 0 0 8px rgba(255,92,156,0.5); }
-.genre__swatch--rock    { background: #ff6a2b; box-shadow: 0 0 8px rgba(255,106,43,0.5); }
-.genre__swatch--jazz    { background: #28e0c4; box-shadow: 0 0 8px rgba(40,224,196,0.5); }
-.genre__swatch--classic { background: #ffb847; box-shadow: 0 0 8px rgba(255,184,71,0.5); }
-.genre__swatch--elec    { background: #8a5bff; box-shadow: 0 0 8px rgba(138,91,255,0.5); }
-.genre__name { font-size: 12px; color: var(--text-1); }
-.genre__bar {
-  height: 6px; border-radius: 99px; background: rgba(255,255,255,0.05);
-  overflow: hidden; display: block; position: relative;
-}
-.genre__bar i {
-  position: absolute; left: 0; top: 0; bottom: 0;
-  width: var(--w, 0);
-  background: linear-gradient(90deg, rgba(40,224,196,0.7), var(--neon-cyan));
-  border-radius: 99px;
-  animation: bar-grow 0.9s cubic-bezier(.2,.7,.2,1) both;
-}
-.genre:nth-child(2) .genre__bar i { animation-delay: .05s; }
-.genre:nth-child(3) .genre__bar i { animation-delay: .10s; }
-.genre:nth-child(4) .genre__bar i { animation-delay: .15s; }
-.genre:nth-child(5) .genre__bar i { animation-delay: .20s; }
-@keyframes bar-grow { from { width: 0; } to { width: var(--w, 0); } }
-.genre__pct {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; color: var(--text-2); text-align: right;
-}
-
 @media (max-width: 720px) {
-  .genre { grid-template-columns: 12px 1fr 60px 32px; }
-  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+  .about__grid, .contact__grid { grid-template-columns: 1fr; gap: 32px; }
+  .about__panel { position: static; }
 }
 
 /* ====================== Works ====================== */
