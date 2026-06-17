@@ -110,30 +110,74 @@
       </div>
 
       <aside class="about__panel">
-        <h3 class="panel-title">Toolbox</h3>
+        <!-- 信号链可视化 -->
+        <div class="chain">
+          <h3 class="panel-title">Signal Chain · 信号链路</h3>
+          <div class="chain__row">
+            <div class="chain__node">
+              <div class="chain__dot chain__dot--in"></div>
+              <div class="chain__label">Input<br/><span>录音 / 分轨 / Stem</span></div>
+            </div>
+            <div class="chain__line"></div>
+            <div class="chain__node">
+              <div class="chain__dot chain__dot--edit"></div>
+              <div class="chain__label">Edit<br/><span>RX / Melodyne</span></div>
+            </div>
+            <div class="chain__line"></div>
+            <div class="chain__node">
+              <div class="chain__dot chain__dot--mix"></div>
+              <div class="chain__label">Mix<br/><span>PT / Reaper / Cubase</span></div>
+            </div>
+            <div class="chain__line"></div>
+            <div class="chain__node">
+              <div class="chain__dot chain__dot--master"></div>
+              <div class="chain__label">Master<br/><span>Limiter / Dither</span></div>
+            </div>
+            <div class="chain__line"></div>
+            <div class="chain__node">
+              <div class="chain__dot chain__dot--out"></div>
+              <div class="chain__label">Deliver<br/><span>Stereo / Atmos / Wwise</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 工程能力指标 -->
+        <div class="about__stats">
+          <div class="stat">
+            <div class="stat__num">7.1.4</div>
+            <div class="stat__label">Immersive · 全景声</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">-0.1<br/><span>LUFS</span></div>
+            <div class="stat__label">Streaming Target</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">44.1–192<br/><span>kHz</span></div>
+            <div class="stat__label">Sample Rate</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">24/32<br/><span>bit</span></div>
+            <div class="stat__label">Bit Depth</div>
+          </div>
+        </div>
+
+        <!-- 监听链路 + 风格 -->
+        <h3 class="panel-title">Monitoring · 监听链路</h3>
         <ul class="tag-list">
-          <li class="tag tag--accent">Pro Tools</li>
-          <li class="tag tag--accent">Reaper</li>
-          <li class="tag tag--accent">Ableton Live</li>
-          <li class="tag tag--accent">Cubase</li>
-          <li class="tag tag--accent">Nuendo</li>
-          <li class="tag tag--accent">Wwise</li>
-          <li class="tag">UAD</li>
-          <li class="tag">Waves</li>
-          <li class="tag">FabFilter</li>
-          <li class="tag">Plugin Alliance</li>
-          <li class="tag">iZotope RX</li>
-          <li class="tag">Arturia</li>
-          <li class="tag">UVR</li>
+          <li class="tag tag--accent">Genelec 8341A</li>
+          <li class="tag tag--accent">Adam A7X</li>
+          <li class="tag">Sonarworks SoundID</li>
+          <li class="tag">Sub · 监听校准</li>
         </ul>
 
-        <h3 class="panel-title">Music Style</h3>
-        <ul class="tag-list">
-          <li class="tag tag--pop">流行 / Pop</li>
-          <li class="tag tag--rock">摇滚 / Rock</li>
-          <li class="tag tag--jazz">爵士 / Jazz</li>
-          <li class="tag tag--classic">古典 / Classical</li>
-        </ul>
+        <h3 class="panel-title">Genres · 涉猎风格</h3>
+        <div class="genre-bar">
+          <div class="genre-segment genre-segment--pop" style="flex: 30"><span>流行 Pop</span><em>30%</em></div>
+          <div class="genre-segment genre-segment--rock" style="flex: 22"><span>摇滚 Rock</span><em>22%</em></div>
+          <div class="genre-segment genre-segment--jazz" style="flex: 18"><span>爵士 Jazz</span><em>18%</em></div>
+          <div class="genre-segment genre-segment--classic" style="flex: 15"><span>古典 Classical</span><em>15%</em></div>
+          <div class="genre-segment genre-segment--elec" style="flex: 15"><span>电子 / Indie</span><em>15%</em></div>
+        </div>
       </aside>
     </div>
   </section>
