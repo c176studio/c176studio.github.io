@@ -66,7 +66,8 @@ code { font-family: 'JetBrains Mono', monospace; color: var(--neon-cyan); }
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .nav__logo { display: flex; align-items: center; gap: 10px; font-weight: 600; }
-.logo-mark { color: var(--neon-cyan); display: grid; place-items: center; }
+.logo-mark { display: grid; place-items: center; }
+.logo-mark img { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; }
 .logo-text { font-size: 18px; letter-spacing: 1px; }
 
 .nav__links { display: flex; gap: 36px; }
