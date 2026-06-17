@@ -166,8 +166,8 @@ document.getElementById('baClose').addEventListener('click', closeBA);
 modal.addEventListener('click', (e) => { if (e.target === modal) closeBA(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBA(); });
 
-/* ---------- 6. 联系表单 → Formspree 提交 ---------- */
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // ← 替换成你的 Formspree endpoint
+/* ---------- 6. 联系表单 → Web3Forms 提交 ---------- */
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
@@ -178,20 +178,21 @@ form?.addEventListener('submit', async (e) => {
   formStatus.style.color = 'var(--text-muted)';
 
   try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
+    const res = await fetch(WEB3FORMS_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
     });
-    if (res.ok) {
+    const json = await res.json();
+    if (res.ok && json.success) {
       formStatus.textContent = '✅ 询价已发送！我会在 12 小时内联系你。';
       formStatus.style.color = 'var(--neon-cyan)';
       form.reset();
     } else {
-      throw new Error('提交失败');
+      throw new Error(json.message || '提交失败');
     }
   } catch (err) {
-    formStatus.textContent = '❌ 发送失败，请直接加微信或发邮件联系我。';
+    formStatus.textContent = '❌ 发送失败，请直接加微信或发邮件 (914228146@qq.com) 联系我。';
     formStatus.style.color = '#ff6b6b';
   }
   setTimeout(() => { formStatus.textContent = ''; }, 8000);
