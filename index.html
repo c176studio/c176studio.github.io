@@ -110,74 +110,118 @@
       </div>
 
       <aside class="about__panel">
-        <!-- 信号链可视化 -->
-        <div class="chain">
+        <!-- 1. 信号链路 -->
+        <section class="block">
           <h3 class="panel-title">Signal Chain · 信号链路</h3>
-          <div class="chain__row">
-            <div class="chain__node">
-              <div class="chain__dot chain__dot--in"></div>
-              <div class="chain__label">Input<br/><span>录音 / 分轨 / Stem</span></div>
-            </div>
-            <div class="chain__line"></div>
-            <div class="chain__node">
-              <div class="chain__dot chain__dot--edit"></div>
-              <div class="chain__label">Edit<br/><span>RX / Melodyne</span></div>
-            </div>
-            <div class="chain__line"></div>
-            <div class="chain__node">
-              <div class="chain__dot chain__dot--mix"></div>
-              <div class="chain__label">Mix<br/><span>PT / Reaper / Cubase</span></div>
-            </div>
-            <div class="chain__line"></div>
-            <div class="chain__node">
-              <div class="chain__dot chain__dot--master"></div>
-              <div class="chain__label">Master<br/><span>Limiter / Dither</span></div>
-            </div>
-            <div class="chain__line"></div>
-            <div class="chain__node">
-              <div class="chain__dot chain__dot--out"></div>
-              <div class="chain__label">Deliver<br/><span>Stereo / Atmos / Wwise</span></div>
-            </div>
-          </div>
-        </div>
+          <ol class="chain">
+            <li class="chain__step">
+              <span class="chain__dot chain__dot--in"></span>
+              <div class="chain__body">
+                <strong>Input</strong>
+                <em>录音 / 分轨 / Stem</em>
+              </div>
+            </li>
+            <li class="chain__step">
+              <span class="chain__dot chain__dot--edit"></span>
+              <div class="chain__body">
+                <strong>Edit</strong>
+                <em>RX / Melodyne</em>
+              </div>
+            </li>
+            <li class="chain__step">
+              <span class="chain__dot chain__dot--mix"></span>
+              <div class="chain__body">
+                <strong>Mix</strong>
+                <em>Pro Tools · Reaper · Cubase</em>
+              </div>
+            </li>
+            <li class="chain__step">
+              <span class="chain__dot chain__dot--master"></span>
+              <div class="chain__body">
+                <strong>Master</strong>
+                <em>Limiter · Dither</em>
+              </div>
+            </li>
+            <li class="chain__step">
+              <span class="chain__dot chain__dot--out"></span>
+              <div class="chain__body">
+                <strong>Deliver</strong>
+                <em>Stereo / Atmos / Wwise</em>
+              </div>
+            </li>
+          </ol>
+        </section>
 
-        <!-- 工程能力指标 -->
-        <div class="about__stats">
-          <div class="stat">
-            <div class="stat__num">7.1.4</div>
-            <div class="stat__label">Immersive · 全景声</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">-0.1<br/><span>LUFS</span></div>
-            <div class="stat__label">Streaming Target</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">44.1–192<br/><span>kHz</span></div>
-            <div class="stat__label">Sample Rate</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">24/32<br/><span>bit</span></div>
-            <div class="stat__label">Bit Depth</div>
-          </div>
-        </div>
+        <!-- 2. 工程能力 -->
+        <section class="block">
+          <h3 class="panel-title">Capabilities · 工程能力</h3>
+          <ul class="cap-grid">
+            <li class="cap">
+              <div class="cap__num">7.1.4</div>
+              <div class="cap__label">Immersive<br/>全景声</div>
+            </li>
+            <li class="cap">
+              <div class="cap__num">-0.1 <em>LUFS</em></div>
+              <div class="cap__label">Streaming<br/>流媒体响度</div>
+            </li>
+            <li class="cap">
+              <div class="cap__num">44.1–192 <em>kHz</em></div>
+              <div class="cap__label">Sample Rate<br/>采样率</div>
+            </li>
+            <li class="cap">
+              <div class="cap__num">24 / 32 <em>bit</em></div>
+              <div class="cap__label">Bit Depth<br/>位深</div>
+            </li>
+          </ul>
+        </section>
 
-        <!-- 监听链路 + 风格 -->
-        <h3 class="panel-title">Monitoring · 监听链路</h3>
-        <ul class="tag-list">
-          <li class="tag tag--accent">Genelec 8341A</li>
-          <li class="tag tag--accent">Adam A7X</li>
-          <li class="tag">Sonarworks SoundID</li>
-          <li class="tag">Sub · 监听校准</li>
-        </ul>
+        <!-- 3. 监听 -->
+        <section class="block">
+          <h3 class="panel-title">Monitoring · 监听链路</h3>
+          <ul class="tag-list">
+            <li class="tag tag--accent">Genelec 8341A</li>
+            <li class="tag tag--accent">Adam A7X</li>
+            <li class="tag">Sonarworks SoundID</li>
+            <li class="tag">Sub · 监听校准</li>
+          </ul>
+        </section>
 
-        <h3 class="panel-title">Genres · 涉猎风格</h3>
-        <div class="genre-bar">
-          <div class="genre-segment genre-segment--pop" style="flex: 30"><span>流行 Pop</span><em>30%</em></div>
-          <div class="genre-segment genre-segment--rock" style="flex: 22"><span>摇滚 Rock</span><em>22%</em></div>
-          <div class="genre-segment genre-segment--jazz" style="flex: 18"><span>爵士 Jazz</span><em>18%</em></div>
-          <div class="genre-segment genre-segment--classic" style="flex: 15"><span>古典 Classical</span><em>15%</em></div>
-          <div class="genre-segment genre-segment--elec" style="flex: 15"><span>电子 / Indie</span><em>15%</em></div>
-        </div>
+        <!-- 4. 风格 -->
+        <section class="block">
+          <h3 class="panel-title">Genres · 涉猎风格</h3>
+          <ul class="genre-list">
+            <li class="genre">
+              <span class="genre__swatch genre__swatch--pop"></span>
+              <span class="genre__name">流行 / Pop</span>
+              <span class="genre__bar"><i style="--w: 30%"></i></span>
+              <span class="genre__pct">30%</span>
+            </li>
+            <li class="genre">
+              <span class="genre__swatch genre__swatch--rock"></span>
+              <span class="genre__name">摇滚 / Rock</span>
+              <span class="genre__bar"><i style="--w: 22%"></i></span>
+              <span class="genre__pct">22%</span>
+            </li>
+            <li class="genre">
+              <span class="genre__swatch genre__swatch--jazz"></span>
+              <span class="genre__name">爵士 / Jazz</span>
+              <span class="genre__bar"><i style="--w: 18%"></i></span>
+              <span class="genre__pct">18%</span>
+            </li>
+            <li class="genre">
+              <span class="genre__swatch genre__swatch--classic"></span>
+              <span class="genre__name">古典 / Classical</span>
+              <span class="genre__bar"><i style="--w: 15%"></i></span>
+              <span class="genre__pct">15%</span>
+            </li>
+            <li class="genre">
+              <span class="genre__swatch genre__swatch--elec"></span>
+              <span class="genre__name">电子 / Indie</span>
+              <span class="genre__bar"><i style="--w: 15%"></i></span>
+              <span class="genre__pct">15%</span>
+            </li>
+          </ul>
+        </section>
       </aside>
     </div>
   </section>
