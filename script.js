@@ -166,50 +166,72 @@ document.getElementById('baClose').addEventListener('click', closeBA);
 modal.addEventListener('click', (e) => { if (e.target === modal) closeBA(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBA(); });
 
-/* ---------- 6. 联系表单 → FormSubmit.co 提交 (备用通道) ---------- */
-const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/914228146@qq.com';
-
+/* ---------- 6. 联系表单 → 弹窗双通道(不依赖第三方) ---------- */
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
-form?.addEventListener('submit', async (e) => {
+const contactModal = document.getElementById('contactModal');
+const contactClose = document.getElementById('contactClose');
+
+form?.addEventListener('submit', (e) => {
   e.preventDefault();
-  const data = Object.fromEntries(new FormData(form).entries());
-  formStatus.textContent = '⏳ 正在发送...';
-  formStatus.style.color = 'var(--text-muted)';
-
+  // 1. 弹窗显示联系方式(不依赖任何邮件服务)
+  if (contactModal) {
+    contactModal.setAttribute('aria-hidden', 'false');
+    contactModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  // 2. 同时尝试静默提交到 FormSubmit(作为邮件备份,失败也无所谓)
   try {
-    // FormSubmit 接受 FormData,不需要 access_key,首次使用会发送确认邮件
-    const formData = new FormData();
-    formData.append('_subject', 'c176 studio · 新项目询价');
-    formData.append('_template', 'table');
-    formData.append('_captcha', 'false');
-    formData.append('name', data.name || '');
-    formData.append('contact', data.contact || '');
-    formData.append('project_type', data.type || '');
-    formData.append('deadline', data.deadline || '');
-    formData.append('message', data.msg || '');
-
-    const res = await fetch(FORMSUBMIT_ENDPOINT, {
+    const data = Object.fromEntries(new FormData(form).entries());
+    const fd = new FormData();
+    fd.append('_subject', 'c176 studio · 新项目询价');
+    fd.append('_template', 'table');
+    fd.append('_captcha', 'false');
+    fd.append('name', data.name || '');
+    fd.append('contact', data.contact || '');
+    fd.append('project_type', data.type || '');
+    fd.append('deadline', data.deadline || '');
+    fd.append('message', data.msg || '');
+    fetch('https://formsubmit.co/ajax/914228146@qq.com', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
-      body: formData
-    });
-    const json = await res.json().catch(() => ({}));
-    if (res.ok && (json.success === 'true' || json.success === true)) {
-      formStatus.textContent = '✅ 询价已发送！我会在 12 小时内联系你（请同时检查垃圾邮件箱）。';
-      formStatus.style.color = 'var(--neon-cyan)';
-      form.reset();
-    } else {
-      console.error('FormSubmit error:', res.status, json);
-      formStatus.textContent = `❌ 发送失败（${res.status}）${json.message ? ': ' + json.message : ''}。请直接加微信或发邮件至 914228146@qq.com 联系我。`;
-      formStatus.style.color = '#ff6b6b';
-    }
-  } catch (err) {
-    console.error('Fetch error:', err);
-    formStatus.textContent = '❌ 网络异常，请直接加微信或发邮件 (914228146@qq.com) 联系我。';
-    formStatus.style.color = '#ff6b6b';
+      body: fd
+    }).catch(() => {});
+  } catch (_) {}
+  form.reset();
+});
+
+contactClose?.addEventListener('click', () => {
+  contactModal?.classList.remove('is-open');
+  contactModal?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+});
+contactModal?.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.classList.remove('is-open');
+    contactModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
-  setTimeout(() => { formStatus.textContent = ''; }, 10000);
+});
+
+// 复制邮箱
+document.querySelectorAll('.copyable').forEach((el) => {
+  el.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const text = el.dataset.copy || el.textContent.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      const hint = el.nextElementSibling;
+      if (hint && hint.classList.contains('copy-hint')) {
+        const orig = hint.textContent;
+        hint.textContent = '✓ 已复制';
+        hint.style.color = 'var(--neon-cyan)';
+        setTimeout(() => { hint.textContent = orig; hint.style.color = ''; }, 2000);
+      }
+    } catch (_) {
+      window.location.href = 'mailto:' + text;
+    }
+  });
 });
 
 /* ---------- 7. 作品卡悬停:声波条纹 CSS 动效 ---------- */
