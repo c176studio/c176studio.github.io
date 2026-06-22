@@ -295,6 +295,16 @@ section { padding: 120px var(--pad); max-width: var(--container); margin: 0 auto
   position: relative; aspect-ratio: 16/9; overflow: hidden;
   background: linear-gradient(135deg, var(--c1, #28e0c4), var(--c2, #ff2d8a));
 }
+.track__cover--img {
+  background-size: cover;
+  background-position: center;
+}
+.track__cover--img::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
 .cover-shape {
   position: absolute; inset: 0;
   background:
