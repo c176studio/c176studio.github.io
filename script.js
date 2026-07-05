@@ -162,6 +162,21 @@ function closeBA() {
 document.querySelectorAll('.ba-btn').forEach((b) => {
   b.addEventListener('click', () => openBA(b.dataset.target));
 });
+
+/* ---- 作品音频：预览版 ↔ 完整版切换 ---- */
+document.querySelectorAll('.track__full').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const audio = link.closest('.track__info').querySelector('audio');
+    if (!audio) return;
+    const isPreview = audio.src.includes('_preview');
+    const newSrc = isPreview ? link.dataset.full : link.dataset.preview;
+    audio.pause();
+    audio.src = newSrc;
+    audio.load();
+    link.textContent = isPreview ? '⏸ 返回预览版' : '▶ 播放完整版';
+  });
+});
 document.getElementById('baClose').addEventListener('click', closeBA);
 modal.addEventListener('click', (e) => { if (e.target === modal) closeBA(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBA(); });
