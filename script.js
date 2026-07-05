@@ -116,7 +116,7 @@ tabs.forEach((tab) => {
     tab.classList.add('is-active');
     const cat = tab.dataset.cat;
     tracks.forEach((tr) => {
-      const show = cat === 'all' || tr.dataset.cat === cat;
+      const show = cat === 'all' || tr.dataset.cat.split(' ').includes(cat);
       tr.classList.toggle('is-hidden', !show);
     });
   });
