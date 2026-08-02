@@ -370,6 +370,9 @@ section { padding: 120px var(--pad); max-width: var(--container); margin: 0 auto
   position: relative; display: block;
   aspect-ratio: 16/9; overflow: hidden;
 }
+.recording__cover--gradient {
+  background: linear-gradient(135deg, var(--c1, #1a3a5c), var(--c2, #c89b3c));
+}
 .recording__cover img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .4s;
